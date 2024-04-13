@@ -1,0 +1,5 @@
+# Ignore environment files
+/backend/penv
+/backend/assets/default/*
+node_modules/
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly-Report</title>
+    <style>
+      .chart {
+          display: flex;
+          height: 400px;
+          justify-content: space-around;
+          align-items: flex-end;
+          background-color: aliceblue;
+      }
+
+      .info {
+          display: flex;
+          height: 50px;
+          justify-content: space-around;
+          align-items: flex-end;
+          background-color: aliceblue;
+      }     
+    
+
+      .bar {
+          width: 35px;
+          background-color: rgb(87, 87, 136);
+          margin: 0 5px;
+      }
+    </style>    
+  </head>
+  <body>
+    <h3>Monthly Report</h3>
+    <hr>
+    <br>
+    <h4>Song Performance</h4>
+    <div class="csc chart">
+      {% for i in range(ds.title|length) %}
+      <div class="bar" style="height: {{ ds.plays[i]/msl * 400 }}px;"></div>
+      {% endfor %}  
+    </div>
+    <div class="csc info">
+      {% for i in range(ds.title|length) %}
+      <div class="ii">
+      <div>{{ds.title[i]}}</div>
+      <div>plays:{{ds.plays[i]}}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <hr>
+    <br>
+    <h3>Album Performance:</h3>
+    <div class="cac chart">
+      {% for i in range(da.title|length) %}
+      <div class="bar" style="height: {{ da.plays[i]/mal * 400 }}px;"></div>
+      {% endfor %}  
+    </div>
+    <div class="cac info">
+      {% for i in range(da.title|length) %}
+      <div class="ii">
+      <div>{{da.title[i]}}</div>
+      <div>plays:{{da.plays[i]}}</div>
+      </div>
+      {% endfor %}      
+    </div>
+  </body>
+</html>
