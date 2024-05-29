@@ -5,7 +5,7 @@ Backend-Flask Frontend-Vue3
 
 Project report: https://drive.google.com/file/d/1jkuA3l2cPJ-5Gn6KLAG0S3DhXyoXFDM8/view?usp=drive_link
 
-##To Run:
+To Run:
 
 Install all the dependencies from the backend directory
 
